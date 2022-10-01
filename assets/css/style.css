@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500&display=swap');
+
+:root {
+    --theme-background: #F9F6F7;
+    --theme-background-btn: #FF971D;
+    --theme-white: #fff;
+    --theme-black: #000;
+    --theme-checked: #00FF00;
+    --theme-edit: #0080ff;
+    --theme-delete: #ff0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {  
+    background-color: var(--theme-background);
+    font-family: 'Lobster', cursive;
+    min-height: 75vh;
+}
+
+header {
+    font-size: 2rem;
+    margin-top: 10rem;
+}
+
+header, 
+form {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form > input {
+    min-width: 15%;
+    border-radius: 0%;
+}
+
+form > input,
+form > button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0%;
+}
+
+form > button {
+    color: var(--theme-background-btn);
+    background-color: var(--theme-white);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+form > button:hover {
+    color: var(--theme-white);
+    background-color: var(--theme-background-btn);
+    transform: scale(1.05);
+}
+
+.todo-container {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background-color: var(--theme-white);
+    color: var(--theme-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo > li {
+    flex: 1;
+}
+
+.complete-btn,
+.update-btn,
+.delete-btn {
+    color: var(--theme-white);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 0%;
+}
+
+.complete-btn,
+.update-btn,
+.delete-btn {
+    background: var(--theme-white);
+    color: var(--theme-black);
+    transition: all 0.5s ease;
+}
+
+.complete-btn:hover,
+.update-btn:hover,
+.delete-btn:hover {
+    color: var(--theme-white);
+}
+
+.complete-btn:hover {
+    background: var(--theme-checked);
+}
+
+.update-btn:hover {
+    background: var(--theme-edit);
+}
+
+.delete-btn:hover {
+    background: var(--theme-delete);
+}
+
+.todo-item {
+    padding: 0.5rem 0.5rem;
+    font-size: 1.5rem;
+}
+
+button > i {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
